@@ -21,3 +21,4 @@ var divisiones = document.getElementById("dividir");
 
 //clicks
 
+alert(document.getElementById("0").innerHTML("0"));
