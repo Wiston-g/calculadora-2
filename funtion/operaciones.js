@@ -11,6 +11,50 @@ var nueve = document.getElementById("9");
 var punto = document.getElementById("punto");
 var resultado = document.getElementById("resultado"); 
 var clear= document.getElementById("C");
+var operador1;
+var operador2;
+var operacion;
+
+function limpiar(){
+    resultado.textContent="";
+};
+
+
+
+function blanco(){
+    resultado.textContent="";
+    operandor1=0;
+    operador2=0;
+    operacion="";
+}
+
+
+
+
+
+function ejecutar(){
+    var ejecu = 0;
+    switch (operacion) {
+        case "+":
+            ejecu=parseFloat(operador1)+ parseFloat(operador2);
+            break;
+    
+        case "-":
+            ejecu=parseFloat(operandor1)- parseFloat(operador2);
+            break;
+        case "*":
+            ejecu=parseFloat(operador1) * parseFloat(operador2);
+            break;
+        case "/":
+            ejecu=parseFloat(operador1)/ parseFloat(operador2);
+            break;   
+    }
+    blanco();
+    resultado.textContent=ejecu;
+};
+
+
+
 
 
 //operaciones
@@ -25,9 +69,7 @@ var igual = document.getElementById("igual");
 
 
 //clicks
-clear.addEventListener("click", function(){
-    resultado.textContent = "";
-});
+clear.addEventListener("click", limpiar);
 
 
 cero.addEventListener("click",  function (){       
@@ -76,17 +118,25 @@ punto.addEventListener("click", function(){
 
 
 sumas.addEventListener("click", function(){
-    alert("+")
+    operador1 = resultado.textContent;
+    operacion = "+";
+    limpiar();
 });
 restas.addEventListener("click", function(){
-    alert("-")
+    operandor1 = resultado.textContent;
+    operacion = "-";
+    limpiar();
 });
 multiplicaciones.addEventListener("click", function(){
-    alert("*")
+    operador1 = resultado.textContent;
+    operacion = "*";
+    limpiar();
 });
 divisiones.addEventListener("click", function(){
-    alert("/")
+   operador1 = resultado.textContent;
+    operacion = "/";
+    limpiar();
 });
 igual.addEventListener("click", function(){
-    alert("=")
-});
+    operador2 = resultado.textContent;
+    ejecutar()});
