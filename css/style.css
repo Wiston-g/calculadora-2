@@ -1,3 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
 body{
     background-color: #DFDBE5;
 background-color: #010002;
@@ -12,14 +21,14 @@ li{
     border-radius:  none;
     border-color: cornsilk;
     border:solid;
-    margin: 1em;
+    margin: .3em;
     
 }
 
 li{
-    padding: 2em;
+    padding: 1em;
     text-decoration: #DFDBE5;
-    font-size: 1em;
+    font-size: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     width: 1em;
@@ -52,7 +61,7 @@ li:hover{
     display: block;
     background-color: cornsilk;
     margin: 3em 0em;
-    width: 40em;
+    width: 20em;
     color: black;
     text-align: right;
 }
