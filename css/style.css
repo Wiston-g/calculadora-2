@@ -52,6 +52,8 @@ li:hover{
     background-color: cornsilk;
     margin: 0px 65px;
     width: 260px;
+    color: black;
+    text-align: right;
 }
 
 p{
